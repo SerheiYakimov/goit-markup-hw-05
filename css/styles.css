@@ -155,8 +155,6 @@ img {
 }
 
 .link {
-  position: relative;
-
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -178,21 +176,25 @@ img {
   color: var(--accent-color);
 }
 
+.item {
+  position: relative;
+}
+
 .line {
-  position: absolute;
   display: flex;
-  opacity: 0;
 }
 
 .line::after {
   content: "";
   width: 48px;
   height: 4px;
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
 }
 
-.link:hover .line {
+.link-current:hover .line {
   fill: var(--accent-color);
-  opacity: 1;
 }
 
 .link:hover .list-item {
