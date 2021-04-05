@@ -180,6 +180,28 @@ img {
   position: relative;
 }
 
+.item .icon {
+  display: flex;
+}
+
+.item > .icon::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+}
+
+/*
+1. сделать для айкон которое в айтем афтер
+2. сделать для айкон поситион абсолют,а айтем поситион релатив
+3. при ховере на айтем, афтер икон меняет цвет и появляется
+
+.item {
+  position: relative;
+}
+
 .line {
   display: flex;
 }
@@ -195,6 +217,11 @@ img {
 
 .link-current:hover .line {
   fill: var(--accent-color);
+}
+*/
+
+.list-item {
+  --grid-item: 3;
 }
 
 .link:hover .list-item {
