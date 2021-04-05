@@ -155,6 +155,8 @@ img {
 }
 
 .link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -176,7 +178,24 @@ img {
   color: var(--accent-color);
 }
 
-.list-item {
+.line {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.line::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+}
+
+.link:hover .line {
+  fill: var(--accent-color);
+  opacity: 1;
+}
+
+.link:hover .list-item {
   --grid-item: 3;
 }
 
