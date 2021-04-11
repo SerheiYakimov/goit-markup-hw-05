@@ -173,6 +173,7 @@ img {
 
 .link-current {
   color: var(--accent-color);
+  position: relative;
 }
 
 .link:hover,
@@ -180,24 +181,17 @@ img {
   color: var(--accent-color);
 }
 
-.item-nav {
-  position: relative;
-}
-
-.item-nav .icon {
+.link-current::after {
+  content: "";
   position: absolute;
   bottom: 0;
-  fill: var(--second-text-color);
-  opacity: 0;
+  left: 0;
 
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.item-nav:hover .icon {
-  fill: var(--accent-color);
-  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .list-item {
